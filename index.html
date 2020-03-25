@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>CV Emile Bex</title>
+</head>
+<style>
+  @font-face {
+    font-family: Montserrat;
+    src: url("fonts/Montserrat/Montserrat-Regular.ttf");
+  }
+  @font-face {
+    font-family: Montserrat-Bold;
+    src: url("fonts/Montserrat/Montserrat-Bold.ttf");
+  }
+  @font-face {
+    font-family: Montserrat-Light;
+    src: url("fonts/Montserrat/Montserrat-Light.ttf");
+  }
+  @font-face {
+    font-family: Montserrat-LightItalic;
+    src: url("fonts/Montserrat/Montserrat-LightItalic.ttf");
+  }
+  @font-face {
+    font-family: Montserrat-BoldItalic;
+    src: url("fonts/Montserrat/Montserrat-BoldItalic.ttf");
+  }
+  body {
+    height: calc(1122px * 2);
+    width: 794px;
+    background-color: white;
+    font-family: Montserrat, sans-serif;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0;
+   /* text-align: justify;*/
+  }
+  .page {
+    height: 1122px;
+    width: 794px;
+    display: flex;
+    flex-direction: column;
+  }
+  #header {
+    display: flex;
+    background-image: url("assets/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #left-header {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  #right-header {
+    flex: 5;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #picture {
+    width: 150px;
+    height: 150px;
+    background-image: url("assets/pic.jpg");
+    background-position: 0 0;
+    border-radius: 75px;
+    rotation: 90deg;
+    background-size: cover;
+  }
+  #name {
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 36px;
+    margin-bottom: 14px;
+  }
+  #search {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+  }
+  #job {
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  #domain {
+    font-family: Montserrat-Light, sans-serif;
+    font-size: 12px;
+  }
+  .content {
+    display: flex;
+    flex: 1;
+    background-color: white;
+    color: #17304F;
+    font-size: 12px;
+  }
+  .left-panel {
+    flex: 3;
+   /* display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;*/
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .right-panel {
+    flex: 5;
+    background-color: #efefef;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .category {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+  }
+  .title {
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 15px;
+    color: #2C425F;
+  }
+  .separator {
+    background-color: #2C425F;
+    height: 4px;
+    width: 70px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  .bold {
+    font-family: Montserrat-Bold, sans-serif;
+  }
+  .light {
+    font-family: Montserrat-Light, sans-serif;
+  }
+  .light-italic {
+    font-family: Montserrat-LightItalic, sans-serif;
+  }
+  .bold-italic {
+    font-family: Montserrat-BoldItalic, sans-serif;
+  }
+  .icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  img {
+    width: 10px;
+    height: 10px;
+    margin-right: 12px;
+  }
+  .small {
+    font-size: 10px;
+  }
+  .margin-20px {
+    margin-bottom: 20px;
+  }
+  .margin-10px {
+    margin-bottom: 10px;
+  }
+  .margin-5px {
+    margin-bottom: 5px;
+  }
+  .list {
+    padding-inline-start: 20px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+  li:last-child {
+    margin-bottom: 0;
+  }
+  .skill {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .skill-name {
+    flex: 3;
+    text-align: left;
+    margin-right: 5px;
+  }
+  .rating {
+    flex: 2;
+    display: flex;
+    margin-left: 5px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .full-dot {
+    background-color: #5271ff;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+  }
+  .empty-dot {
+    background-color: #7c8587;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+  }
+</style>
+<body>
+<div class="page">
+  <div id="header">
+    <div id="left-header">
+      <div id="picture">
+      </div>
+    </div>
+    <div id="right-header">
+      <div id="name">EMILE BEX</div>
+      <div id="search">RECHERCHE D'EMPLOI EN TANT QUE</div>
+      <div id="job">DÉVELOPPEUR MOBILE OU WEB</div>
+      <div id="domain">DANS UNE ASSOCIATION OU UNE ENTREPRISE DE L'ECONOMIE<br/>SOCIALE ET SOLIDAIRE</div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="left-panel">
+      <div class="category">
+        <div class="title">C O N T A C T</div>
+        <div class="separator"></div>
+        <div class="icon margin-10px">
+          <img src="assets/icons/address.png" />
+          <div class="">21 rue Gabriel Péri<br/>69100 Villeurbanne</div>
+        </div>
+        <div class="icon margin-10px">
+          <img src="assets/icons/email.png" />
+          <div class="">emile.bex@gmail.com</div>
+        </div>
+        <div class="icon">
+          <img src="assets/icons/phone.png" />
+          <div class="">06 28 14 54 75</div>
+        </div>
+      </div>
+      <div class="category">
+        <div class="title">P R O F I L</div>
+        <div class="separator"></div>
+        <div class="margin-10px">23 ans, né le 24/04/1996</div>
+        <div class="margin-10px">Permis B</div>
+        <div class="margin-10px">Centres d'intérêt :</div>
+        <ul class="list">
+          <li class="light">Programmation</li>
+          <li class="light">Sciences</li>
+          <li class="light">Voyages</li>
+          <li class="light">Musique</li>
+          <li class="light">Vie associative</li>
+          <li class="light">Surf et ski</li>
+        </ul>
+      </div>
+      <div class="category">
+        <div class="title">L A N G U E S</div>
+        <div class="separator"></div>
+        <div class="bold margin-5px">Anglais</div>
+        <div class="margin-10px">Bilingue (double nationalité franco-américaine)</div>
+        <div class="bold margin-5px">Allemand</div>
+        <div class="margin-10px">Bonne maîtrise (vécu 5 ans en Allemagne)</div>
+        <div class="bold margin-5px">Espagnol</div>
+        <div class="">Notions</div>
+      </div>
+    </div>
+    <div class="right-panel">
+      <div class="category">
+        <div class="title">F O R M A T I O N</div>
+        <div class="separator"></div>
+        <div class="margin-20px">
+          <div class="light small margin-5px">JUIN 2019</div>
+          <div class="margin-5px bold">Diplôme d'Ingénieur Informatique</div>
+          <div class="light margin-5px">Spécialité Informatique et Systèmes d'Information</div>
+          <div class="light small">CPE Lyon, Lyon</div>
+        </div>
+        <div class="margin-20px">
+          <div class="light small margin-5px">JUIN 2016</div>
+          <div class="margin-5px bold">Diplôme Universitaire de Technologie (DUT) Informatique</div>
+          <div class="light small">Université Claude Bernard Lyon 1, Villeurbanne</div>
+        </div>
+      </div>
+      <div class="category">
+        <div class="title">E X P É R I E N C E</div>
+        <div class="title">P R O F E S S I O N N E L L E</div>
+        <div class="separator"></div>
+        <div class="margin-20px">
+          <div class="margin-5px bold">Alternance de 3 ans dans le service mobile de <span class="bold-italic">SQLI</span></div>
+          <div class="light small margin-5px">SEPT 2016 - AOÛT 2019 | LYON</div>
+          <ul class="list">
+            <li class="light">Participation aux étapes d’avant-vente des différents projets</li>
+            <li class="light">Accompagnement des clients sur la définition de leurs besoins</li>
+            <li class="light">Réalisation technique des différents projets, en utilisant notamment des technologies mobiles cross-platform, le tout en suivant une démarche agile (Scrum)</li>
+            <li class="light">Projets marquants :</li>
+            <ul class="list">
+              <li class="light small">Assistant numérique pour les personnes équipées d’une pompe à insuline, pour <span class="light-italic">Roche</span> (application mobile en React Native)</li>
+              <li class="light small">Catalogue numérique accessible hors-ligne à destination des agriculteurs clients de la marque, pour <span class="light-italic">RAGT</span> (application mobile en React Native)</li>
+              <li class="light small">Solution permettant de contrôler à distance le contenu affiché sur des tablettes incrustées dans des coffrets de luxe, pour <span class="light-italic">VM France</span> (back-office en Angular JS, back-end en Laravel, application tablette en Android)</li>
+              <li class="light small">Application permettant l’activation de garantie sur des produits de luxe, avec un système de reconnaissance optique de caractères, pour <span class="light-italic">Richemont</span> (application mobile en React Native)</li>
+              <li class="light small">Application de e-commerce à destination des professionnels, pour <span class="light-italic">Orexad</span> (application mobile en React Native)</li>
+              <li class="light small">Application permettant l’accès en mode hors-ligne à une base de données documentaire relatif aux lois humanitaires internationales, pour le <span class="light-italic">Comité International de la Croix-Rouge</span> (back-end en .NET, application mobile en React Native)</li>
+            </ul>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="page">
+  <div class="content">
+    <div class="left-panel">
+      <div class="category">
+        <div class="title">C O M P É T E N C E S</div>
+        <div class="title">T E C H N I Q U E S</div>
+        <div class="separator"></div>
+        <div class="bold margin-5px">Langages</div>
+        <div class="margin-10px">JavaScript, Java, PHP</div>
+        <div class="bold margin-5px">Mobile</div>
+        <div class="margin-10px">React Native, Android</div>
+        <div class="bold margin-5px">Web</div>
+        <div class="light small margin-5px">Front</div>
+        <div class="margin-10px">React JS, Angular JS</div>
+        <div class="light small margin-5px">Back</div>
+        <div class="margin-10px">Spring Boot, Laravel, Node.js</div>
+        <div class="bold margin-5px">Base de données</div>
+        <div class="margin-10px">SQL, Realm</div>
+        <div class="bold margin-5px">Gestion de projet</div>
+        <div class="margin-10px">Méthodes agiles (Scrum)</div>
+        <div class="bold margin-5px">Intégration continue</div>
+        <div class="margin-10px">Fastlane, GitLab CI/CD</div>
+        <div class="bold margin-5px">Autres outils</div>
+        <div class="">Git, Jira, TFS, Slack</div>
+      </div>
+      <div class="category">
+        <div class="title">C O M P É T E N C E S</div>
+        <div class="title">I N T E R -</div>
+        <div class="title">P E R S O N N E L L E S</div>
+        <div class="separator"></div>
+        <!--<div class="skill margin-10px">
+          <div class="skill-name">Relationnel</div>
+          <div class="rating">
+            <div class="full-dot"></div>
+            <div class="full-dot"></div>
+            <div class="full-dot"></div>
+            <div class="full-dot"></div>
+            <div class="full-dot"></div>
+          </div>
+        </div>
+        <div class="skill margin-10px">
+          <div class="skill-name">Ouverture d'esprit</div>
+          <div class="rating">
+            <div class="full-dot"></div>
+            <div class="full-dot"></div>
+            <div class="full-dot"></div>
+            <div class="full-dot"></div>
+            <div class="full-dot"></div>
+          </div>
+        </div>
+        <div class="skill margin-10px">
+          <div class="skill-name">Curiosité</div>
+          <div class="rating">
+            <div class="full-dot"></div>
+            <div class="full-dot"></div>
+            <div class="full-dot"></div>
+            <div class="full-dot"></div>
+            <div class="full-dot"></div>
+          </div>
+        </div>
+        <div class="skill margin-10px">
+          <div class="skill-name">Communication</div>
+          <div class="rating">
+            <div class="full-dot"></div>
+            <div class="full-dot"></div>
+            <div class="full-dot"></div>
+            <div class="full-dot"></div>
+            <div class="empty-dot"></div>
+          </div>
+        </div>
+        <div class="skill margin-10px">
+          <div class="skill-name">Dynamisme</div>
+          <div class="rating">
+            <div class="full-dot"></div>
+            <div class="full-dot"></div>
+            <div class="full-dot"></div>
+            <div class="full-dot"></div>
+            <div class="empty-dot"></div>
+          </div>
+        </div>-->
+        <ul class="list">
+          <li>Relationnel</li>
+          <li>Ouverture d'esprit</li>
+          <li>Curiosité</li>
+          <li>Communication</li>
+          <li>Dynamisme</li>
+        </ul>
+      </div>
+    </div>
+    <div class="right-panel">
+      <div class="category">
+        <div class="margin-20px">
+          <div class="margin-5px bold">Stage de 2 mois chez <span class="bold-italic">Xetec Limited</span></div>
+          <div class="light small margin-5px">JUIL 2018 - AOÛT 2018 | DUBLIN</div>
+          <div class="light">Développement d’une solution mobile de gestion de maintenance en Xamarin</div>
+        </div>
+        <div class="margin-20px">
+          <div class="margin-5px bold">Stage de 3 mois dans le service mobile de <span class="bold-italic">SQLI</span></div>
+          <div class="light small margin-5px">AVR 2016 - JUIN 2016 | LYON</div>
+          <div class="light">Réalisation d’une application mobile en React Native pour le comité d'entreprise permettant de gérer les emprunts de DVD et de Blu-Ray</div>
+        </div>
+      </div>
+      <div class="category">
+        <div class="title">E X P É R I E N C E</div>
+        <div class="title">A S S O C I A T I V E</div>
+        <div class="separator"></div>
+        <div class="margin-20px">
+          <div class="margin-5px"><span class="bold">Service Civique au sein de l'association <span class="bold-italic">Entourage</span></span>, dont le but est de lutter contre l'isolement des personnes à la rue en favorisant la participation de tous, avec ou sans-abri, dans un même réseau de solidarité</div>
+          <div class="light small margin-5px">SEPT 2019 - AVRIL 2020 | LYON</div>
+          <ul class="list">
+            <li class="light">Gestion des partenariats associatifs</li>
+            <li class="light">Organisation d’événements solidaires</li>
+            <li class="light">Animation d'ateliers de sensibilisation</li>
+            <li class="light">Actions de terrain et permanences dans des structures d'accueil</li>
+            <li class="light">Animation de communauté et modération sur une plateforme numérique collaborative</li>
+          </ul>
+        </div>
+        <div class="margin-20px">
+          <div class="margin-5px"><span class="bold">Membre actif de <span class="bold-italic">GAELIS</span></span>, plus grosse fédération étudiante de Lyon, rassemblant une cinquantaine d’associations différentes</div>
+          <div class="light small margin-5px">NOV 2016 - JUIN 2017 | LYON</div>
+          <ul class="list">
+            <li class="light">Suivi d’une douzaine d’associations administratrices</li>
+            <li class="light">Organisation d’événements solidaires et sociaux</li>
+          </ul>
+        </div>
+        <div class="margin-20px">
+          <div class="margin-5px"><span class="bold">Président de la <span class="bold-italic">Student Club</span></span>, fédération des Bureaux Des Étudiants (BDE) des départements IUT du site de la Doua (5 associations)</div>
+          <div class="light small margin-5px">NOV 2015 - NOV 2016 | LYON</div>
+          <ul class="list">
+            <li class="light">Gestion d’une équipe de 10 personnes</li>
+            <li class="light">Organisation d’événements (week-ends de formation, événements de cohésion…)</li>
+            <li class="light">Participation aux différents conseils d’IUT ou de l’université</li>
+            <li class="light">Collaboration avec les élus étudiants</li>
+            <li class="light">Administration de l’association fédératrice</li>
+          </ul>
+        </div>
+        <div class="margin-20px">
+          <div class="margin-5px"><span class="bold">Membre actif du BDE</span> du département IUT Informatique</div>
+          <div class="light small margin-5px">JAN 2015 - NOV 2015 | LYON</div>
+          <ul class="list">
+            <li class="light">Organisation d’événements</li>
+            <li class="light">Service régulier dans une cafétéria étudiante</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
